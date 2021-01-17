@@ -10,24 +10,24 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class consultarTest {
-    private consultar c;
+    private consultar consul;
     @Before
     public void  setconsultar() {
 
-        c = new consultar();
+        consul = new consultar();
     }
 
     @Test
     public void consultar_nombre(){
 
-        assertEquals("Cinthia", c.especialista("Cinthia"));
+        assertEquals("Cinthia", consul.especialista("Cinthia"));
     }
 
 
 
     @Test
     public void NumCedula() {
-        assertEquals(c.cedula("1713446209"),"1713446209");
+        assertEquals(consul.cedula("1713446209"),"1713446209");
 
     }
 
@@ -44,7 +44,7 @@ public class consultarTest {
 
         }catch(Exception e){
             System.out.println("Error");
-            assertEquals(c.cedula("1713446209"),str);
+            assertEquals(consul.cedula("1713446209"),str);
         }
     }
 
@@ -53,14 +53,14 @@ public class consultarTest {
         String[] Actual={"Kari","Cinthia","Marco"};
         String[] Esperados={"","",""};
         assertArrayEquals("No coincide",
-                c.especialistas_Neurologia(Esperados),Actual);
+                consul.especialistas_Neurologia(Esperados),Actual);
     }
 
     @Test
     public void ArreglosThat(){
         String[] Actual={"Kari","Cinthia","Marco"};
         String[] Esperados={"","",""};
-        String[] array = c.especialistas_Neurologia(Esperados);
+        String[] array = consul.especialistas_Neurologia(Esperados);
         assertThat("No coincide",Actual, is(array));
     }
 
@@ -70,7 +70,7 @@ public class consultarTest {
         String esp="";
         List<String> nombres = new ArrayList<String>();
         nombres.add("");
-        nombres.add(c.especialista(esp));
+        nombres.add(consul.especialista(esp));
         nombres.add("Edison");
 
         for (String n: nombres) {
