@@ -15,7 +15,7 @@ public class AgendarTest {
     @Parameterized.Parameters
     public static Iterable<Object[]>getcharge() {
         List<Object[]> obj = new ArrayList<>();
-        obj.add(new Object[]{2});
+        obj.add(new Object[]{4});
         return obj;
     }
     private String num_especialista;
@@ -28,7 +28,7 @@ public class AgendarTest {
     @Test
     public void especialista() {
 
-       int actual =2;
+       int actual =4;
        assertEquals(expected,actual);
 
     }
