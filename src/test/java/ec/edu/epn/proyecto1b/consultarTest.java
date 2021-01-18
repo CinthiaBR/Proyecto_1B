@@ -27,13 +27,13 @@ public class consultarTest {
 
     @Test
     public void NumCedula() {
-        assertEquals(consul.cedula("1713446209"),"1713446209");
+        assertEquals(consul.cedula("0919217844"),"0919217844");
 
     }
 
     @Test
     public void testException(){
-        String str ="1713446209";
+        String str ="0919217844";
         int i=0;
         try{
 
@@ -44,7 +44,7 @@ public class consultarTest {
 
         }catch(Exception e){
             System.out.println("Error");
-            assertEquals(consul.cedula("1713446209"),str);
+            assertEquals(consul.cedula("0919217844"),str);
         }
     }
 

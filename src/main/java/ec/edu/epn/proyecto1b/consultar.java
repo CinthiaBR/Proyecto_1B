@@ -7,7 +7,7 @@ public class consultar {
 
 
     public String cedula(String s) {
-        s = "1713446209";
+        s = "0919217844";
         return s;
     }
 
